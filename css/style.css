@@ -5,6 +5,104 @@
     background-color: rgb(30, 30, 40);
 }
 
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 35vh;
+    border-bottom: white;
+    border-width: 20px;
+}
+
+#head-logo {
+    display: flex;
+    align-items: top;
+    justify-content: end;
+}
+
+#logo {
+    width: 128px;
+    height: 128px;
+    padding-top: 2vw;
+    padding-right: 2vw;
+}
+
+.desktop-header {
+    display: block;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2vw;
+    cursor: pointer;
+    position: relative;
+    margin-left: 2vw;
+    margin-top: 3vh;
+    z-index: 1;
+}
+
+.line {
+    width: 3vw;
+    height: 3px;
+    border-radius: 3px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.line:first-child {
+    transform-origin: top left;
+}
+
+.line:last-child {
+    transform-origin: bottom left;
+}
+
+.menu {
+    top: 0;
+    left: 0;
+    width: 33%;
+    height: auto;
+    background-color: rgb(30, 30, 40);
+    color: #fff;
+    transform: translateX(-120%);
+    transition: transform 0.3s ease;
+    z-index: 0;
+    margin-top: 8vh;
+}
+
+.menu.active {
+    transform: translateX(8%);
+    z-index: 1;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    padding-bottom: 15px;
+    margin-left: 5px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#hor-line-top, #hor-line-bottom {
+    margin: 0;
+}
+
+#welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 8vh;
+}
+
 .cards {
     display: flex;
     justify-content: center;
@@ -15,6 +113,8 @@
 .card {
     margin: 0;
     padding: 0;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
     border-radius: 20px;
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
@@ -28,4 +128,52 @@
 
 .card-text {
     background-color: rgb(60, 60, 80);
+}
+
+#cards {
+    padding-top: 15vh;
+    margin-top: -4vh;
+    padding-bottom: 12vh;
+}
+
+#ideas {
+    padding-top: 12vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mb-3 {
+    width: 35vw;
+}
+
+#display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#suggestions {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(40, 40, 50);
+    width: 35vw;
+    height: 75vh;
+    border-radius: 5vw;
+}
+
+.title-output {
+    width: 90%;
+    background-color: rgb(40, 40, 50);
+    
+}
+
+.content-output {
+    width: 90%;
+    background-color: rgb(40, 40, 50);
 }
